@@ -1,3 +1,8 @@
 @mixin font {
     font-family: 'Lexend Deca';
+
+}
+@mixin lists{
+    display: flex;
+    padding: 0;
 }
