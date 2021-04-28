@@ -6,5 +6,9 @@
     margin: 0;
     padding: 0;
     list-style: none;
-  }
-  
+}
+@mixin lists{
+    display: flex;
+    padding: 0;
+}
+
