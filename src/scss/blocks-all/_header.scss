@@ -1,0 +1,126 @@
+.header__list{
+    @include lists;
+    display: flex;
+    align-items: center;
+margin-left: 58px;
+
+}
+.header{
+    position: fixed;
+    background: rgba(255, 255, 255, 1);
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+    transition: .5s ease;
+    z-index: 999;
+}
+.header.sticky{
+    background-color: #6b5934;
+    // padding: 10px 100px;
+}
+.header--container{
+    font-family: "Space Mono", monospace;
+    font-weight: 700;
+    display: flex;
+align-items: center;
+padding: 12px;
+
+}
+.header__link{
+    text-decoration: none;
+    color: #939CAA;
+    &:hover{
+        color: #FCB72B;
+        transition: .5s ease;
+       
+    }
+}
+.header__item{
+    margin-right: 32px;
+  
+}
+.header__item:last-child{
+    margin-right: 0;
+}
+@media screen and (max-width:1106px) {
+    
+   .header__list{
+       margin-left: 35px;
+   }
+}
+// mobile
+@media screen and (max-width:690px){
+    .header__list{
+        display: none;
+
+    }
+    .header__list.active{
+        @include lists;
+       z-index: 999;
+       position: absolute;
+        background: #333A44;
+        color: #fff;
+        top: 100%;
+        left: -32px;
+        width: 256px;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        
+        flex-direction: column;
+      margin: 0;
+    }
+    .header__item{
+        margin-right: 0;
+        margin-top: 30px;
+    }
+    .header{
+        margin: 0 auto;
+    width: 375px;
+    position: relative;
+    }
+    .header--link{
+        display: none;
+        
+    }
+    .link-active{
+        display: block;
+        position: absolute;
+       z-index: 999;
+       top: 900%;
+       left: -81px;
+  
+       display: flex;
+       align-items: center;
+       
+       flex-direction: column;
+     margin: 0;
+    }
+  
+    .header--container{
+        text-align: center;
+       margin-left: 92px;
+    }
+    .header__menu-btn{
+        position: absolute;
+        background: url(../../img/hamburger.svg) no-repeat center center ;
+        width: 20px;
+        height: 20px;
+        left: 0;
+        cursor: pointer;
+        transition: .4s ease;
+        }
+
+    .header__menu-btn.active{
+        z-index: 999;
+        background: url('../../img/close.svg') no-repeat center center;
+        background-size: 25px;
+        transition: .7s ease;
+   
+    }
+    .header__link{
+        margin-top: 30px;
+        color: #939CAA;
+    }
+}
